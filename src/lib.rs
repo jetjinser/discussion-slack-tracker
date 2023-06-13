@@ -71,7 +71,7 @@ where
 
                     let taken_body: String = body.chars().take(30).collect();
                     let msg = format!(
-                        "New Discussion Created by {login}:\n{title}\n{taken_body}\n> {html_url}",
+                        ":thought_ballon: New Discussion Created by _{login}_:\n*{title}*\n{taken_body}\n> {html_url}",
                     );
 
                     send(msg).await;
