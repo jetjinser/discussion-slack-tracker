@@ -70,8 +70,9 @@ where
                         .unwrap();
 
                     let taken_body: String = body.chars().take(200).collect();
+                    let end = if body.len() > 200 { "..." } else { "" };
                     let msg = format!(
-                        "New Discussion Created by _{login}_:\n*{title}*\n{taken_body}\n\nopen: {html_url}",
+                        "New Discussion Created by _{login}_:\n*{title}*\n{taken_body}{end}\n\nopen: {html_url}",
                     );
 
                     send(msg).await;
