@@ -45,6 +45,8 @@ where
                 }
             }
 
+            log::debug!("{:#?}", ep);
+
             let discussion = &ep["discussion"];
             match discussion.as_object() {
                 Some(dis) => {
