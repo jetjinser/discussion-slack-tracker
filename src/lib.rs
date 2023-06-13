@@ -69,9 +69,9 @@ where
                         .and_then(|value| value.as_str())
                         .unwrap();
 
-                    let taken_body: String = body.chars().take(30).collect();
+                    let taken_body: String = body.chars().take(200).collect();
                     let msg = format!(
-                        ":thought_ballon: New Discussion Created by _{login}_:\n*{title}*\n{taken_body}\n> {html_url}",
+                        "New Discussion Created by _{login}_:\n*{title}*\n{taken_body}\n\nopen: {html_url}",
                     );
 
                     send(msg).await;
